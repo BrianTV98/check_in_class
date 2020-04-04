@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Check_In</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_text_login">Đăng nhập</string>
+    <string name="NumberStudent">Mã Sinh Viên</string>
+    <string name="wellcome">Chào mừng bạn đến với ứng dụng điểm danh của chúng tôi</string>
+    <string name="all_text_password">Mật khẩu</string>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="check_in">Điểm Danh</string>
+    <string name="dialog_text_please_turn_on_gps">Vui lòng bật GPS</string>
+    <string name="dialog_text_turn_on_gps">Bật Định Vị</string>
+    <string name="capture">go to capture</string>
+    <string name="gotoCapture">Capture</string>
 </resources>

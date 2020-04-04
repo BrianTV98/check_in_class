@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="listenner"
+            type="com.example.check_in.ui.check_in.CheckInListenner" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        tools:context=".ui.check_in.CheckInFragment">
+        <RelativeLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/deffault_margin_16dp"
+            android:layout_marginEnd="@dimen/deffault_margin_16dp">
+
+            <com.example.check_in.ui.check_in.CornectTextureView
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <TextureView
+                    android:id="@+id/view_finder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.example.check_in.ui.check_in.CornectTextureView>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imvView"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleX="-1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="10dp"
+                android:layout_height="300dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_check_in"
+            android:text="@string/check_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
