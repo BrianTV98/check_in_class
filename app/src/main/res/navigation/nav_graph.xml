@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/spashFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -11,10 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"
-            android:id="@+id/action_loginFragment_to_QRCodeFragment"
-            app:destination="@id/QRCodeFragment" />
+            android:id="@+id/action_loginFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
     </fragment>
     <fragment
         android:id="@+id/QRCodeFragment"
@@ -41,4 +39,36 @@
         android:name="com.example.check_in.ui.check_in.CheckInFragment"
         android:label="fragment_check_in"
         tools:layout="@layout/fragment_check_in" />
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.check_in.ui.course.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" >
+        <action
+            android:id="@+id/action_courseFragment_to_detailCourseFragment"
+            app:destination="@id/detailCourseFragment" >
+            <argument
+                android:name="myArg"
+                app:argType="integer"
+                android:defaultValue="1" />
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailCourseFragment"
+        android:name="com.example.check_in.ui.DetailCourse.DetailCourseFragment"
+        android:label="fragment_detail_course"
+        tools:layout="@layout/fragment_detail_course" >
+        <action
+            android:id="@+id/action_detailCourseFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+        <action
+            android:id="@+id/action_detailCourseFragment_to_QRCodeFragment"
+            app:destination="@id/QRCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.check_in.ui.Schedule.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
 </navigation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="course"
+            type="com.example.check_in.data.remote.respone.CourseRespone" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/deffault_margin_16dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon_course"
+            app:layout_constraintTop_toTopOf="parent"
+            app:imagUrl="@{null}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/icon_course"
+            android:layout_marginTop="@dimen/deffault_margin_16dp"
+            app:civ_circle_background_color="@android:color/black"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/icon_course"
+            app:layout_constraintStart_toStartOf="@id/icon_course"
+            app:layout_constraintEnd_toEndOf="@id/icon_course"
+            android:text="@{course.TenKH}"
+            android:textSize="24sp"
+            android:fontFamily="@font/lobster_regular"
+            android:layout_marginTop="@dimen/margin_all_small_8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/deffault_margin_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

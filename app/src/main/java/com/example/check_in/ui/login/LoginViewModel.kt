@@ -2,6 +2,7 @@ package com.example.check_in.ui.login
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.check_in.data.model.Student
 import com.example.check_in.until.checkValidIDStudent
 import com.example.check_in.until.checkValidPassword
 
@@ -14,11 +15,12 @@ class LoginViewModel : ViewModel(){
     }
 
     val authenticated =  MutableLiveData<AuthenticationState>()
-    var userName : String= ""
-
+    val userName = MutableLiveData<String>()
+    val student = MutableLiveData<Student>()
 
     init {
         authenticated.value =AuthenticationState.UNAUTHENTICATED
+        userName.value=""
     }
 
     fun checkValid(username : String, password : String  ) : Boolean{
@@ -30,7 +32,7 @@ class LoginViewModel : ViewModel(){
     fun authenticate(username : String, password: String){
 
         if(passwordIsForUserName(username, password)){
-            this.userName = userName
+            this.userName.value = userName.toString()
             authenticated.value= AuthenticationState.AUTHENTICATED
         }
         else{

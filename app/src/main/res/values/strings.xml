@@ -13,4 +13,18 @@
     <string name="dialog_text_turn_on_gps">Bật Định Vị</string>
     <string name="capture">go to capture</string>
     <string name="gotoCapture">Capture</string>
+    <string name="all_list_course">Khóa Học Của Bạn</string>
+    <string name="icon_course">Khóa học</string>
+    <string name="name_of_course">Tên khóa học</string>
+    <string name="see_schedule">Xem lich hoc</string>
+    <string name="morning">Buổi sáng</string>
+    <string name="affternoon">Buổi chiều</string>
+    <string name="subject">MH:</string>
+    <string name="nameClass">Lớp:</string>
+    <string name="classroom">Phòng:</string>
+    <string name="time_begin">Bắt Đầu:</string>
+    <string name="time_end">KT:</string>
+    <string name="err_username">Tên đăng nhập không hợp lệ</string>
+    <string name="err_password">Mật khẩu không hợp lệ</string>
+
 </resources>

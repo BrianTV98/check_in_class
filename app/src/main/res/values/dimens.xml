@@ -7,4 +7,7 @@
     <dimen name="text_size_all_20sp">20dp</dimen>
     <dimen name="margin_all_normal_16dp">16dp</dimen>
     <dimen name="text_size_all_18sp">18sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="deffault_size_title">28sp</dimen>
+    <dimen name="default_margin_large">32dp</dimen>
 </resources>

@@ -12,36 +12,22 @@
         android:layout_height="match_parent"
         tools:context=".ui.qrcode.QRCodeFragment">
 
-        <TextView
-            android:id="@+id/qr_edit_text"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="20sp"
-            android:hint="data ở đây"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/scan_qr_code"
-            android:onClick="@{listenner::btnScanQRcode}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_goto_capture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gotoCapture"
-            android:onClick="@{listenner::btnGotoCapture}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+       <com.budiyev.android.codescanner.CodeScannerView
+           android:id="@+id/scanner_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:autoFocusButtonColor="@android:color/white"
+           app:autoFocusButtonVisible="true"
+           app:flashButtonColor="@android:color/white"
+           app:flashButtonVisible="true"
+           app:frameColor="@android:color/white"
+           app:frameCornersSize="70dp"
+           app:frameCornersRadius="0dp"
+           app:frameAspectRatioWidth="1"
+           app:frameAspectRatioHeight="1"
+           app:frameSize="0.75"
+           app:frameThickness="2dp"
+           app:maskColor="#77000000"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
